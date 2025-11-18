@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet">
+    <script src="index.js"></script>
+    <title>E-Wave Auto</title>
+  </head>
+  <body>
+    <nav>
+      <h3>E-Wave Auto</h3>
+      <img src="icons/home.png" alt="home icon" id="home-button" class="nav-button">
+      <div id="sign-in-button" class="nav-button">
+        <p id="user-btn-text">Sign In</p>
+        <!-- Image from https://icons8.com/icon/12438/customer -->
+        <img src="icons/signin.png" alt="profile icon" id="icon">
+      </div>
+    </nav>
+    <section id="user-section" class="hidden view">
+      <h1>Welcome, <span id="username-display"></span>!</h1>
+      <h3>Your Previous Transactions:</h3>
+      <ul id="transactions-list">
+      </ul>
+      <section id="recommended-section" class="row-layout">
+      </section>
+    </section>
+    <section id="sign-in-section" class="hidden view">
+      <h1 id="sign-in-header">Sign In</h1>
+      <div id="sign-in-form">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <button id="submit-button">Sign In</button>
+      </div>
+    </section>
+    <section id="vehicle-details" class="hidden view">
+      <div id="details">
+        <div id="details-left">
+          <!--This image from https://www.iconpacks.net/free-icon/car-2897.html-->
+          <img src="../img/car-default.png" alt="a picture of the car" id="details-image">
+        </div>
+        <div id="details-right">
+          <div id="details-header">
+            <h1 id="detail-name">Vehicle Name</h1>
+            <p id="detail-price">$XX,XXX</p>
+          </div>
+          <p id="detail-rating">Community Rating: X/5</p>
+          <p id="detail-description">Description</p>
+          <div id="purchase-button" class="button">
+            <p>Purchase</p>
+          </div>
+        </div>
+      </div>
+      <div id="rev-container">
+        <div id="review-section">
+          <h3>Your Rating:</h3>
+          <div class="rating-input">
+            <input type="radio" id="rating-1" name="rating" value="1">
+            <label for="rating-1">1</label>
+
+            <input type="radio" id="rating-2" name="rating" value="2">
+            <label for="rating-2">2</label>
+
+            <input type="radio" id="rating-3" name="rating" value="3">
+            <label for="rating-3">3</label>
+
+            <input type="radio" id="rating-4" name="rating" value="4">
+            <label for="rating-4">4</label>
+
+            <input type="radio" id="rating-5" name="rating" value="5">
+            <label for="rating-5">5</label>
+          </div>
+
+          <label for="review-text">Write a Review:</label>
+          <input id="review-text" name="review-text" placeholder="Share your thoughts...">
+
+          <div id="submit-review-button">
+            <p>Post</p>
+          </div>
+        </div>
+        <div id="other-reviews">
+        </div>
+      </div>
+    </section>
+    <section id="main-view" class="view">
+      <header>
+        <h1>THE FUTURE IS NOW</h1>
+        <h2>Shop the newest EVs below</h2>
+        <div id="layout-buttons">
+          <div id="column-layout" class="layout-button selected">
+            <p>Column</p>
+          </div>
+          <div id="row-layout" class="layout-button">
+            <p>Row</p>
+          </div>
+        </div>
+        <section id="search-section">
+          <input type="text" id="search-input">
+          <div id="search-button">
+            <p>Search</p>
+          </div>
+          <section id="car-type-filter">
+            <h4>Car Types</h4>
+            <div class="filter-options">
+              <label>
+                <input type="radio" name="car-type" value="sedan">
+                Sedan
+              </label>
+              <label>
+                <input type="radio" name="car-type" value="hatchback">
+                Hatchback
+              </label>
+              <label>
+                <input type="radio" name="car-type" value="truck">
+                Truck
+              </label>
+              <label>
+                <input type="radio" name="car-type" value="fastback">
+                Fastback
+              </label>
+              <label>
+                <input type="radio" name="car-type" value="suv">
+                SUV
+              </label>
+              <label>
+                <input type="radio" name="car-type" value="crossover">
+                Crossover
+              </label>
+            </div>
+          </section>
+          <section id="car-tag-filter">
+            <h4>Car Tags</h4>
+            <div class="filter-options">
+              <label>
+                <input type="radio" name="car-tag" value="luxury">
+                Luxury
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="compact">
+                Compact
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="premium">
+                Premium
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="midsize">
+                Midsize
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="gran-coupe">
+                Gran Coupe
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="performance">
+                Performance
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="falcon-wing">
+                Falcon Wing
+              </label>
+              <label>
+                <input type="radio" name="car-tag" value="adventure">
+                Adventure
+              </label>
+            </div>
+          </section>
+        </section>
+      </header>
+      <section id="vehicle-categories">
+        <article class="category">
+          <h4>Sedans</h4>
+          <div id="sedan" class="vehicle-list">
+          </div>
+        </article>
+        <article class="category">
+          <h4>SUVs</h4>
+          <div id="suv" class="vehicle-list">
+          </div>
+        </article>
+        <article class="category">
+          <h4>Hatchbacks</h4>
+          <div id="hatchback" class="vehicle-list">
+          </div>
+        </article>
+        <article class="category">
+          <h4>Trucks</h4>
+          <div id="truck" class="vehicle-list">
+          </div>
+        </article>
+        <article class="category">
+          <h4>Crossovers</h4>
+          <div id="crossover" class="vehicle-list">
+          </div>
+        </article>
+        <article class="category">
+          <h4>Fastbacks</h4>
+          <div id="fastback" class="vehicle-list">
+          </div>
+        </article>
+      </section>
+      <footer>
+        <div class="image-citations">
+        <p>Disclaimer: no vehicles above are actually for sale</p>
+        <p>Includes images:</p>
+        <p>By Dllu - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=126872938</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=112871832</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=83930074</p>
+        <p>By Alexander Migl - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=117274556</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=95939742</p>
+        <p>By Alexander-93 - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=138311472</p>
+        <p>By Kārlis Dambrāns from Latvia - Nissan Leaf 2018, CC BY 2.0,
+          https://commons.wikimedia.org/w/index.php?curid=98131982</p>
+        <p>By Greg Gjerdingen - https://www.flickr.com/photos/greggjerdingen/51680741900/,
+          CC BY 2.0, https://commons.wikimedia.org/w/index.php?curid=112619991</p>
+        <p>By Norbert Aepli, Switzerland, CC BY 3.0,
+          https://commons.wikimedia.org/w/index.php?curid=24996709</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=94409978</p>
+        <p>By Mr.choppers - Own work, CC BY-SA 3.0,
+          https://commons.wikimedia.org/w/index.php?curid=138255918</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=70077203</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=63303121</p>
+        <p>By Mliu92 - Own work, CC BY-SA 3.0,
+          https://commons.wikimedia.org/w/index.php?curid=132204126</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=67139425</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=110437328</p>
+        <p>By Alexander Migl - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=127040751</p>
+        <p>By Dennis Elzinga - https://www.flickr.com/photos/97202111@N03/50841158482/, CC BY 2.0,
+          https://commons.wikimedia.org/w/index.php?curid=103678145</p>
+        <p>By JustAnotherCarDesigner - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=127449544</p>
+        <p>By Elise240SX - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=121587519</p>
+        <p>By Vauxford - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=95433616</p>
+        <p>By M 93, CC BY-SA 3.0 de,
+          https://commons.wikimedia.org/w/index.php?curid=102925198</p>
+        <p>By Lcaa9 - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=141543648</p>
+        <p>By M 93, CC BY-SA 3.0 de,
+          https://commons.wikimedia.org/w/index.php?curid=107034072</p>
+        <p>By Kevauto - Own work, CC BY-SA 4.0,
+          https://commons.wikimedia.org/w/index.php?curid=120094977</p>
+        </div>
+      </footer>
+    </section>
+    <footer id="confirmation"></footer>
+  </body>
+</html>

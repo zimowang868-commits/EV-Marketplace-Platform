@@ -1,0 +1,454 @@
+body, h1, h2, h3, p, button {
+  margin: 0;
+  border: 0;
+}
+
+body, h1, h2, h3, p, button, #transactions-list {
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #121212;
+  line-height: 1.6;
+}
+
+body,
+#search-input,
+#sign-in-form input,
+#submit-button,
+h4,
+.layout-button,
+.vehicle-info h5,
+.filter-options label,
+.filter-options h4,
+footer,
+#review-text,
+#submit-review-button,
+#review-section div,
+#review-section button {
+  color: #ffffff;
+}
+
+h4,
+#details-image,
+header,
+.row-layout .category,
+.vehicle-image,
+footer,
+#review-text {
+  width: 100%;
+}
+
+#other-reviews {
+  display: flex;
+  flex-direction: column;
+}
+
+.review {
+  border: 0.5px solid #515151;
+  border-radius: 0.25rem;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #121212;
+}
+
+.review p {
+  margin: 5px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #000000;
+}
+
+.nav-button {
+  padding: 0.25rem 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+#search-input {
+  padding: 0.5rem;
+  margin-right: 0.5rem;
+  border: 1px solid #555555;
+  border-radius: 0.25rem;
+  background-color: #000000;
+}
+
+#search-button {
+  padding: 0.25rem 1rem;
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+#icon {
+  width: 30px;
+  height: auto;
+}
+
+#sign-in-button > p {
+  padding: 0.2rem;
+}
+
+#sign-in-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  display: flex;
+  text-align: center;
+}
+
+#sign-in-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+#sign-in-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+#sign-in-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#sign-in-form input {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #555555;
+  border-radius: 0.25rem;
+  background-color: #333333;
+}
+
+#submit-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+}
+
+#vehicle-details {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: row;
+  padding: 2rem;
+  background-color: #212121;
+}
+
+#details-left {
+  width: 90%;
+  padding-right: 2rem;
+}
+
+#details-image {
+  border: 1px solid #555555;
+  border-radius: 0.25rem;
+}
+
+#details-right {
+  width: 90%;
+  text-align: left;
+}
+
+#details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#detail-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#detail-price {
+  font-size: 1.25rem;
+  color: #56a8ff; /* Adjust color as needed */
+}
+
+#details {
+  width: 75%;
+}
+
+#purchase-button {
+  margin-top: 8px;
+  text-align: center;
+  width: 10rem;
+  background-color: #007bff;
+  cursor: pointer;
+}
+
+header {
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  /* img from
+  www.freepik.com/free-vector/abstract-futuristic-background-with-lines-dots_6318637.
+  htm#query=blue%20technology%20wallpaper&position=0&from_view=keyword&track=ais&uuid
+  =dbeab82d-195f-477b-9027-c9da5d13c32a */
+  background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("img/background.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: 80%;
+}
+
+header h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+
+#search-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+#layout-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.layout-button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #00152c;
+  border: none;
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+}
+
+#vehicle-categories {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.vehicle-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.column-layout #vehicle-categories, .row-layout .vehicle-list {
+  flex-direction: row;
+}
+
+.column-layout .vehicle-list, .row-layout #vehicle-categories {
+  flex-direction: column;
+}
+
+.column-layout .category {
+  flex: 1;
+}
+
+.category {
+  width: 200px;
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.category, .vehicle {
+  width: 200px;
+}
+
+.vehicle {
+  border: 0.5px solid #2e2e2e;
+  border-radius: 0.25rem;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: #202020;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.vehicle:hover {
+  transform: scale(1.05);
+}
+
+.vehicle-image {
+  width: 175px;
+  height: auto;
+  border-bottom: 1px solid #555555;
+  border-radius: 0.25rem;
+}
+
+.vehicle-info {
+  text-align: left;
+}
+
+.vehicle-info h5 {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.vehicle-info p {
+  font-size: 0.9rem;
+  margin: 0.3rem 0;
+  color: #cccccc;
+}
+
+.column-layout {
+  flex-direction: row;
+}
+
+.row-layout {
+  flex-direction: column;
+}
+
+#car-type-filter,
+#car-tag-filter {
+  background-color: rgb(26, 26, 26);
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 5px;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-options label {
+  font-size: 0.8rem;
+  margin-bottom: 4px;
+}
+
+.filter-options input {
+  margin-right: 3px;
+}
+
+.filter-options h4 {
+  margin-bottom: 5px;
+}
+
+#home-button {
+  width: 30px;
+  height: auto;
+}
+
+footer {
+  background-color: #333333;
+  padding: 1rem;
+  text-align: center;
+  bottom: 0;
+}
+
+.image-citations {
+  font-size: 0.5rem;
+}
+
+#user-section {
+  margin: 20px; /* Add margin for spacing */
+}
+
+#username-display {
+  font-weight: bold;
+  color: #007BFF; /* Blue color, you can change it */
+}
+
+#transactions-list {
+  list-style-type: none;
+}
+
+.transaction-item {
+  border-bottom: 1px solid #ddd; /* Gray border between transactions */
+  padding: 10px;
+}
+
+.transaction-item:last-child {
+  border-bottom: none; /* Remove border on the last transaction */
+}
+
+.transaction-details {
+  font-size: 14px;
+  color: #555;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#review-section {
+  margin-top: 20px;
+}
+
+.rating-input {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.rating-input label {
+  margin: 5px;
+  cursor: pointer;
+}
+
+#review-text {
+  margin-top: 10px;
+  padding: 5px;
+  border: 1px solid #555555;
+  border-radius: 0.25rem;
+  background-color: #000000;
+}
+
+#submit-review-button {
+  margin-top: 10px;
+  text-align: center;
+  padding: 0.2rem 5rem;
+  cursor: pointer;
+  background-color: #007bff;
+  border-radius: 0.25rem;
+}
+
+#rev-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm {
+  background-color: green;
+}
+
+#review-section div {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#review-section button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+#confirmation {
+  text-align: center;
+}
+
+.hidden, #vehicle-details.hidden {
+  display: none;
+}
